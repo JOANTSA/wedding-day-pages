@@ -91,6 +91,7 @@ function App() {
       {/* SECTION HERO - Introduction avec mise en page sophistiquée */}
       <section className="relative py-20 px-4 md:px-8 overflow-hidden">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-12">
+          
           {/* Texte et Bouton */}
           <motion.div
             className="md:w-1/2 text-center md:text-left z-10"
@@ -98,14 +99,25 @@ function App() {
             initial="hidden"
             animate="visible"
           >
+            {/* Noms */}
             <motion.h1
-              className="text-6xl md:text-7xl font-extrabold text-pink-700 mb-4 tracking-tight drop-shadow-lg leading-tight"
+              className="text-5xl md:text-7xl font-extrabold text-pink-700 mb-4 tracking-tight drop-shadow-lg leading-tight"
               variants={itemVariants}
             >
               Jo Antsa & Mialy
             </motion.h1>
+
+            {/* Badge Date */}
+            <motion.div
+              className="inline-block bg-pink-100 text-pink-700 px-6 py-2 rounded-full text-lg md:text-xl font-semibold shadow-md mb-4"
+              variants={itemVariants}
+            >
+              💍 05 Juillet 2025
+            </motion.div>
+
+            {/* Message d'accueil */}
             <motion.p
-              className="text-lg md:text-xl max-w-xl text-gray-700 leading-relaxed mb-8"
+              className="text-lg md:text-xl max-w-xl text-gray-700 leading-relaxed mt-2 mb-8"
               variants={itemVariants}
             >
               Merci de faire partie de ce moment inoubliable dans nos vies.
@@ -115,7 +127,6 @@ function App() {
 
           {/* Images de la section Hero */}
           <div className="w-full md:w-1/2 relative flex justify-center md:justify-end items-center h-[200px] md:h-[500px] md:mt-0">
-            {/* L'image principale est réduite sur mobile pour laisser de la place */}
             <motion.img
               src={heroMainImage}
               alt="Couple principal"
@@ -123,28 +134,35 @@ function App() {
               initial={{ opacity: 0, scale: 0.7, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
             <motion.img
               src={heroSmallImage1}
               alt="Détail 1"
               className="absolute w-20 h-20 top-0 left-0 object-cover rounded-full shadow-xl border-2 border-white rotate-6 z-20
-                         md:w-56 md:h-56 md:-top-4 md:left-1/2 md:right-0 md:transform md:-translate-x-1/2"
+                        md:w-56 md:h-56 md:-top-4 md:left-1/2 md:right-0 md:transform md:-translate-x-1/2"
               initial={{ opacity: 0, scale: 0.7, y: -50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
             <motion.img
               src={heroSmallImage2}
               alt="Détail 2"
               className="absolute w-24 h-24 bottom-0 right-0 object-cover rounded-full shadow-xl border-2 border-white -rotate-12 z-20
-                         md:w-64 md:h-64 md:-bottom-4 md:left-1/4 md:right-1/4 md:transform md:-translate-x-1/2"
+                        md:w-64 md:h-64 md:-bottom-4 md:left-1/4 md:right-1/4 md:transform md:-translate-x-1/2"
               initial={{ opacity: 0, scale: 0.7, y: 50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
           </div>
         </div>
       </section>
+
 
       {/* SECTION PHOTOS PERSONNELLES - Galerie Grille Responsive */}
       <section className="py-16 px-4 bg-white shadow-inner">
@@ -155,8 +173,9 @@ function App() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          Souvenirs en images
+          Nous, en quelques images 📸
         </motion.h2>
+
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Colonne 1 (Mobile: pleine largeur, Desktop: 1/3) */}
@@ -169,6 +188,8 @@ function App() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
             <motion.img
               src={galleryImagesData[1].src}
@@ -179,6 +200,8 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.1 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
           </div>
 
@@ -195,6 +218,8 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
             <motion.img
               src={galleryImagesData[3].src}
@@ -205,6 +230,8 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.3 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
           </div>
 
@@ -218,6 +245,8 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.4 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
             <motion.img
               src={galleryImagesData[5].src}
@@ -228,6 +257,8 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.5 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
             <motion.img
               src={galleryImagesData[6].src}
@@ -238,6 +269,8 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.6 }}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
             />
           </div>
         </div>
@@ -252,8 +285,9 @@ function App() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          Quelques mots…
+          Notre promesse sacrée ✨
         </motion.h2>
+
         <motion.p
           className="max-w-3xl mx-auto text-gray-700 italic text-xl md:text-2xl leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
@@ -279,7 +313,7 @@ function App() {
       <footer className="text-center text-md py-8 bg-purple-200 text-gray-700 shadow-md">
         <p>© 2025 Jo Antsa & Mialy • Mankasitraka anareo rehetra 🌸</p>
         <p className="mt-2 text-sm text-gray-600">
-          Namboarina manokana sy am-pitiavana ho an'ity andro tsy hay hadinoina.
+          Namboarina manokana sy am-pitiavana ho an'ity andro tsy hay hadinoina — 05 Juillet 2025 💒
         </p>
       </footer>
     </main>
