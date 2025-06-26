@@ -111,16 +111,10 @@ function App() {
               Merci de faire partie de ce moment inoubliable dans nos vies.
               Votre présence a rendu notre journée encore plus spéciale 💖
             </motion.p>
-            <motion.button
-              className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
-              variants={itemVariants}
-            >
-              Découvrir Notre Histoire
-            </motion.button>
           </motion.div>
 
           {/* Images de la section Hero */}
-          <div className="md:w-1/2 relative flex justify-center md:justify-end items-center h-[400px] md:h-[500px] mt-12 md:mt-0">
+          <div className="w-full md:w-1/2 relative flex justify-center md:justify-end items-center h-[200px] md:h-[500px] md:mt-0">
             {/* L'image principale est réduite sur mobile pour laisser de la place */}
             <motion.img
               src={heroMainImage}
@@ -130,8 +124,6 @@ function App() {
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             />
-            {/* Ajustement des classes pour mobile pour rendre les images plus visibles */}
-            {/* Sur mobile, les images sont plus petites et positionnées pour être visibles dans les coins supérieurs/inférieurs. */}
             <motion.img
               src={heroSmallImage1}
               alt="Détail 1"
