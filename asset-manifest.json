@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wedding-day-pages/static/css/main.abbef537.css",
-    "main.js": "/wedding-day-pages/static/js/main.755299b4.js",
+    "main.css": "/wedding-day-pages/static/css/main.0ac5cec1.css",
+    "main.js": "/wedding-day-pages/static/js/main.2c482432.js",
     "static/js/453.df31e133.chunk.js": "/wedding-day-pages/static/js/453.df31e133.chunk.js",
     "static/media/pose_en_pied_bonne_symetrique.jpeg": "/wedding-day-pages/static/media/pose_en_pied_bonne_symetrique.adefdd0666eb8c405e50.jpeg",
     "static/media/hero.jpeg": "/wedding-day-pages/static/media/hero.01744cda37719f120dc3.jpeg",
@@ -16,12 +16,12 @@
     "static/media/regard_romantique_balustrade.jpeg": "/wedding-day-pages/static/media/regard_romantique_balustrade.78751102869ae00682d1.jpeg",
     "static/media/romantique.jpeg": "/wedding-day-pages/static/media/romantique.e295204f6db4b1734f31.jpeg",
     "index.html": "/wedding-day-pages/index.html",
-    "main.abbef537.css.map": "/wedding-day-pages/static/css/main.abbef537.css.map",
-    "main.755299b4.js.map": "/wedding-day-pages/static/js/main.755299b4.js.map",
+    "main.0ac5cec1.css.map": "/wedding-day-pages/static/css/main.0ac5cec1.css.map",
+    "main.2c482432.js.map": "/wedding-day-pages/static/js/main.2c482432.js.map",
     "453.df31e133.chunk.js.map": "/wedding-day-pages/static/js/453.df31e133.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abbef537.css",
-    "static/js/main.755299b4.js"
+    "static/css/main.0ac5cec1.css",
+    "static/js/main.2c482432.js"
   ]
 }
