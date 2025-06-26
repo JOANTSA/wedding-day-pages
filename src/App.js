@@ -14,9 +14,9 @@ import enfant from "./assets/images/enfant.jpeg";
 import dynamiqueFun from "./assets/images/dynamique_fun.jpeg";
 import coupleChampNature from "./assets/images/couple_champ_nature.jpeg";
 
-import './App.css'; 
+import './App.css';
 
-const heroMainImage = regardRomantiqueBalustrade; 
+const heroMainImage = regardRomantiqueBalustrade;
 const heroSmallImage1 = romantique;
 const heroSmallImage2 = hero;
 
@@ -47,16 +47,18 @@ const galleryImagesData = [
 
 
 function App() {
+  // Variants Framer Motion pour l'animation d'entrée du conteneur principal
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.2, // Délai entre les animations des enfants
       },
     },
   };
 
+  // Variants Framer Motion pour les éléments de texte et titres
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -70,6 +72,7 @@ function App() {
     },
   };
 
+  // Variants Framer Motion pour les images
   const imageRevealVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
@@ -88,6 +91,7 @@ function App() {
       {/* SECTION HERO - Introduction avec mise en page sophistiquée */}
       <section className="relative py-20 px-4 md:px-8 overflow-hidden">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-12">
+          {/* Texte et Bouton */}
           <motion.div
             className="md:w-1/2 text-center md:text-left z-10"
             variants={containerVariants}
@@ -115,19 +119,24 @@ function App() {
             </motion.button>
           </motion.div>
 
+          {/* Images de la section Hero */}
           <div className="md:w-1/2 relative flex justify-center md:justify-end items-center h-[400px] md:h-[500px] mt-12 md:mt-0">
+            {/* L'image principale est réduite sur mobile pour laisser de la place */}
             <motion.img
               src={heroMainImage}
               alt="Couple principal"
-              className="absolute w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-2xl border-4 border-white z-10"
+              className="absolute w-64 h-64 md:w-96 md:h-96 object-cover rounded-full shadow-2xl border-4 border-white z-10"
               initial={{ opacity: 0, scale: 0.7, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             />
+            {/* Ajustement des classes pour mobile pour rendre les images plus visibles */}
+            {/* Sur mobile, les images sont plus petites et positionnées pour être visibles dans les coins supérieurs/inférieurs. */}
             <motion.img
               src={heroSmallImage1}
               alt="Détail 1"
-              className="absolute w-40 h-40 md:w-56 md:h-56 object-cover rounded-full shadow-xl border-2 border-white -top-4 right-[calc(50%+100px)] md:right-[calc(100%-120px)] md:top-2 transform -translate-x-1/2 md:translate-x-0 rotate-6 z-20"
+              className="absolute w-20 h-20 top-0 left-0 object-cover rounded-full shadow-xl border-2 border-white rotate-6 z-20
+                         md:w-56 md:h-56 md:-top-4 md:left-1/2 md:right-0 md:transform md:-translate-x-1/2"
               initial={{ opacity: 0, scale: 0.7, y: -50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -135,7 +144,8 @@ function App() {
             <motion.img
               src={heroSmallImage2}
               alt="Détail 2"
-              className="absolute w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-xl border-2 border-white -bottom-4 right-[calc(50%-80px)] md:right-[calc(100%-200px)] md:bottom-2 transform -translate-x-1/2 md:translate-x-0 -rotate-12 z-20"
+              className="absolute w-24 h-24 bottom-0 right-0 object-cover rounded-full shadow-xl border-2 border-white -rotate-12 z-20
+                         md:w-64 md:h-64 md:-bottom-4 md:left-1/4 md:right-1/4 md:transform md:-translate-x-1/2"
               initial={{ opacity: 0, scale: 0.7, y: 50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
