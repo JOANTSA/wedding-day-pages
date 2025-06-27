@@ -120,8 +120,8 @@ function App() {
               className="text-lg md:text-xl max-w-xl text-gray-700 leading-relaxed mt-2 mb-8"
               variants={itemVariants}
             >
-              Merci de faire partie de ce moment inoubliable dans nos vies.
-              Votre présence a rendu notre journée encore plus spéciale 💖
+              Isaorana indrindra ianareo tamin’ny nanotronanareo anay tamin’ity andro manokana ity. 
+              Faly sy mankasitraka izahay fa niaraka taminay ianareo, ka nahatonga ity andro ity ho tena andro tsy hay hadinoina 💖
             </motion.p>
           </motion.div>
 
@@ -165,116 +165,59 @@ function App() {
 
 
       {/* SECTION PHOTOS PERSONNELLES - Galerie Grille Responsive */}
-      <section className="py-16 px-4 bg-white shadow-inner">
-        <motion.h2
-          className="text-4xl font-semibold text-center text-pink-700 mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
-        >
-          Nous, en quelques images 📸
-        </motion.h2>
+      <section className="py-12 px-4 bg-white">
+  <motion.h2
+    className="text-3xl md:text-4xl font-semibold text-center text-pink-700 mb-8"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.5 }}
+    transition={{ duration: 0.8 }}
+  >
+    Sarinay 📸
+  </motion.h2>
 
+  {/* MOBILE: SCROLL HORIZONTAL */}
+  <div className="block md:hidden overflow-x-auto">
+    <div className="flex gap-4 w-max">
+      {galleryImagesData.map((img, index) => (
+        <motion.img
+          key={index}
+          src={img.src}
+          alt={img.alt}
+          className="w-64 h-80 object-cover rounded-xl shadow-md flex-shrink-0 hover:scale-105 transition-transform duration-300"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          draggable="false"
+          onContextMenu={(e) => e.preventDefault()}
+        />
+      ))}
+    </div>
+  </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {/* Colonne 1 (Mobile: pleine largeur, Desktop: 1/3) */}
-          <div className="md:col-span-1 flex flex-col gap-6">
-            <motion.img
-              src={galleryImagesData[0].src}
-              alt={galleryImagesData[0].alt}
-              className="w-full h-80 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <motion.img
-              src={galleryImagesData[1].src}
-              alt={galleryImagesData[1].alt}
-              className="w-full h-64 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.1 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-          </div>
+  {/* DESKTOP: GRID */}
+  <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+    {galleryImagesData.map((img, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        <img
+          src={img.src}
+          alt={img.alt}
+          className="w-full h-80 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+          draggable="false"
+          onContextMenu={(e) => e.preventDefault()}
+        />
+      </motion.div>
+    ))}
+  </div>
+</section>
 
-          {/* Colonnes 2, 3 & 4 (Mobile: pleine largeur, Desktop: adapté) */}
-          <div className="md:col-span-1 flex flex-col gap-6 mt-6 md:mt-12">
-            {" "}
-            {/* Décalage pour effet visuel */}
-            <motion.img
-              src={galleryImagesData[2].src}
-              alt={galleryImagesData[2].alt}
-              className="w-full h-64 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.2 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <motion.img
-              src={galleryImagesData[3].src}
-              alt={galleryImagesData[3].alt}
-              className="w-full h-80 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.3 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-          </div>
-
-          <div className="md:col-span-1 lg:col-span-2 flex flex-col gap-6 mt-6 md:mt-0">
-            <motion.img
-              src={galleryImagesData[4].src}
-              alt={galleryImagesData[4].alt}
-              className="w-full h-64 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.4 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <motion.img
-              src={galleryImagesData[5].src}
-              alt={galleryImagesData[5].alt}
-              className="w-full h-80 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.5 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <motion.img
-              src={galleryImagesData[6].src}
-              alt={galleryImagesData[6].alt}
-              className="w-full h-72 object-cover rounded-xl shadow-lg hover:scale-102 transition-transform duration-300"
-              variants={imageRevealVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.6 }}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* SECTION CITATION / SOUHAITS avec animations */}
       <section className="py-16 px-4 bg-pink-100 text-center">
@@ -285,7 +228,7 @@ function App() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          Notre promesse sacrée ✨
+          Vavolombelona Izy ✨
         </motion.h2>
 
         <motion.p
@@ -296,7 +239,7 @@ function App() {
           transition={{ duration: 0.9, delay: 0.2 }}
         >
           « Ary ny amin'ilay noresahintsika, dia izaho sy ianao, indro, Jehovah no vavolombelona
-          amiko sy aminao mandrakizay. »
+          amiko sy aminao mandrakizay. » 
         </motion.p>
         <motion.p
           className="mt-6 text-gray-600 text-lg md:text-xl font-medium"
@@ -311,11 +254,16 @@ function App() {
 
       {/* FOOTER */}
       <footer className="text-center text-md py-8 bg-purple-200 text-gray-700 shadow-md">
-        <p>© 2025 Jo Antsa & Mialy • Mankasitraka anareo rehetra 🌸</p>
+        <p>© 2025 Jo Antsa & Mialy</p>
         <p className="mt-2 text-sm text-gray-600">
-          Namboarina manokana sy am-pitiavana ho an'ity andro tsy hay hadinoina — 05 Juillet 2025 💒
+          Mankasitraka anareo rehetra 🌸
+        </p>
+        <p className="mt-2 text-sm text-gray-600">
+          Namboarina manokana sy am-pitiavana ho an'ity andro tsy hay hadinoina.
         </p>
       </footer>
+
+
     </main>
   );
 }
