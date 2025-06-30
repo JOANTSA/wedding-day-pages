@@ -128,7 +128,7 @@ function App() {
               src={heroSmallImage1}
               alt="Détail 1"
               className="absolute w-20 h-20 top-0 left-0 object-cover rounded-full shadow-xl border-2 border-white rotate-6 z-20
-                        md:w-56 md:h-56 md:-top-4 md:left-1/2 md:right-0 md:transform md:-translate-x-1/2"
+md:w-56 md:h-56 md:-top-8 md:left-1/2 md:right-0 md:transform md:-translate-x-1/2"
               initial={{ opacity: 0, scale: 0.7, y: -50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -139,7 +139,7 @@ function App() {
               src={heroSmallImage2}
               alt="Détail 2"
               className="absolute w-24 h-24 bottom-0 right-0 object-cover rounded-full shadow-xl border-2 border-white -rotate-12 z-20
-                        md:w-64 md:h-64 md:-bottom-4 md:left-1/4 md:right-1/4 md:transform md:-translate-x-1/2"
+                        md:w-64 md:h-64 md:-bottom-10 md:left-1/4 md:right-1/4 md:transform md:-translate-x-1/2"
               initial={{ opacity: 0, scale: 0.7, y: 50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
