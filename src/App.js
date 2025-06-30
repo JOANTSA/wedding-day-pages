@@ -4,35 +4,24 @@ import { motion } from "framer-motion";
 import romantique from "./assets/images/romantique.jpeg";
 import repetitionCoupleArbreVert from "./assets/images/repetition_couple_arbre_vert.jpeg";
 import regardRomantiqueBalustrade from "./assets/images/regard_romantique_balustrade.jpeg";
-import poseEnPied from "./assets/images/pose_en_pied_bonne_symetrique.jpeg";
-import momentTendreBleuCiel from "./assets/images/moment_tendre_bleu_ciel.jpeg";
-import hero from "./assets/images/hero.jpeg";
 import fondDoux from "./assets/images/fond_doux.jpeg";
 import enMouvement from "./assets/images/en_mouvement.jpeg";
 import enfantsVoitureTenueClasse from "./assets/images/enfants_voiture_tenue_classe.jpeg";
 import enfant from "./assets/images/enfant.jpeg";
 import dynamiqueFun from "./assets/images/dynamique_fun.jpeg";
-import coupleChampNature from "./assets/images/couple_champ_nature.jpeg";
 
 import './App.css';
 
 const heroMainImage = regardRomantiqueBalustrade;
 const heroSmallImage1 = romantique;
-const heroSmallImage2 = hero;
+const heroSmallImage2 = repetitionCoupleArbreVert;
 
 const allAvailableImages = [
   fondDoux,
   enMouvement,
   dynamiqueFun,
   enfant,
-  repetitionCoupleArbreVert,
-  momentTendreBleuCiel,
-  enfantsVoitureTenueClasse,
-  coupleChampNature,
-  poseEnPied, 
-  regardRomantiqueBalustrade,
-  hero,
-  romantique
+  enfantsVoitureTenueClasse
 ];
 
 const galleryImagesData = [
@@ -41,8 +30,6 @@ const galleryImagesData = [
   { src: allAvailableImages[2], alt: "Galerie image 3" },
   { src: allAvailableImages[3], alt: "Galerie image 4" },
   { src: allAvailableImages[4], alt: "Galerie image 5" },
-  { src: allAvailableImages[5], alt: "Galerie image 6" },
-  { src: allAvailableImages[6], alt: "Galerie image 7" },
 ];
 
 
@@ -120,8 +107,8 @@ function App() {
               className="text-lg md:text-xl max-w-xl text-gray-700 leading-relaxed mt-2 mb-8"
               variants={itemVariants}
             >
-              Isaorana indrindra ianareo tamin’ny nanotronanareo anay tamin’ity andro manokana ity. 
-              Faly sy mankasitraka izahay fa niaraka taminay ianareo, ka nahatonga ity andro ity ho tena andro tsy hay hadinoina 💖
+              Misaotra indrindra amin'ny fanotronana. Faly sy mankasitraka izahay fa niara-paly taminay ianareo, ka 
+              nahatonga ity andro ity ho tena adnro tsy hay hadinoina 💖
             </motion.p>
           </motion.div>
 
