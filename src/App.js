@@ -108,7 +108,7 @@ function App() {
               variants={itemVariants}
             >
               Misaotra indrindra amin'ny fanotronana. Faly sy mankasitraka izahay fa niara-paly taminay ianareo, ka 
-              nahatonga ity andro ity ho tena adnro tsy hay hadinoina 💖
+              nahatonga ity andro ity ho tena andro tsy hay hadinoina 💖
             </motion.p>
           </motion.div>
 
