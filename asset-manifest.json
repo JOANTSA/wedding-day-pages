@@ -1,27 +1,23 @@
 {
   "files": {
     "main.css": "/wedding-day-pages/static/css/main.bdd06f37.css",
-    "main.js": "/wedding-day-pages/static/js/main.df7e4d90.js",
+    "main.js": "/wedding-day-pages/static/js/main.6846d16c.js",
     "static/js/453.df31e133.chunk.js": "/wedding-day-pages/static/js/453.df31e133.chunk.js",
-    "static/media/pose_en_pied_bonne_symetrique.jpeg": "/wedding-day-pages/static/media/pose_en_pied_bonne_symetrique.adefdd0666eb8c405e50.jpeg",
-    "static/media/hero.jpeg": "/wedding-day-pages/static/media/hero.01744cda37719f120dc3.jpeg",
     "static/media/repetition_couple_arbre_vert.jpeg": "/wedding-day-pages/static/media/repetition_couple_arbre_vert.fb290894d1cdce98825a.jpeg",
     "static/media/enfants_voiture_tenue_classe.jpeg": "/wedding-day-pages/static/media/enfants_voiture_tenue_classe.8714ec1ad16caccbebee.jpeg",
     "static/media/en_mouvement.jpeg": "/wedding-day-pages/static/media/en_mouvement.9b9bc9f465a93daea98a.jpeg",
-    "static/media/couple_champ_nature.jpeg": "/wedding-day-pages/static/media/couple_champ_nature.f6de8bf3c8d6d2c7f2d3.jpeg",
     "static/media/enfant.jpeg": "/wedding-day-pages/static/media/enfant.4b228d45148b6a16feae.jpeg",
-    "static/media/moment_tendre_bleu_ciel.jpeg": "/wedding-day-pages/static/media/moment_tendre_bleu_ciel.b6d184297b56a7ce5223.jpeg",
     "static/media/fond_doux.jpeg": "/wedding-day-pages/static/media/fond_doux.98142f2715dad21bc1a1.jpeg",
     "static/media/dynamique_fun.jpeg": "/wedding-day-pages/static/media/dynamique_fun.bf90c7fc7e0a30150b1d.jpeg",
     "static/media/regard_romantique_balustrade.jpeg": "/wedding-day-pages/static/media/regard_romantique_balustrade.78751102869ae00682d1.jpeg",
     "static/media/romantique.jpeg": "/wedding-day-pages/static/media/romantique.e295204f6db4b1734f31.jpeg",
     "index.html": "/wedding-day-pages/index.html",
     "main.bdd06f37.css.map": "/wedding-day-pages/static/css/main.bdd06f37.css.map",
-    "main.df7e4d90.js.map": "/wedding-day-pages/static/js/main.df7e4d90.js.map",
+    "main.6846d16c.js.map": "/wedding-day-pages/static/js/main.6846d16c.js.map",
     "453.df31e133.chunk.js.map": "/wedding-day-pages/static/js/453.df31e133.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bdd06f37.css",
-    "static/js/main.df7e4d90.js"
+    "static/js/main.6846d16c.js"
   ]
 }
