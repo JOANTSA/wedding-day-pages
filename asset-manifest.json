@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wedding-day-pages/static/css/main.bdd06f37.css",
-    "main.js": "/wedding-day-pages/static/js/main.6846d16c.js",
+    "main.js": "/wedding-day-pages/static/js/main.2bea10f2.js",
     "static/js/453.df31e133.chunk.js": "/wedding-day-pages/static/js/453.df31e133.chunk.js",
     "static/media/repetition_couple_arbre_vert.jpeg": "/wedding-day-pages/static/media/repetition_couple_arbre_vert.fb290894d1cdce98825a.jpeg",
     "static/media/enfants_voiture_tenue_classe.jpeg": "/wedding-day-pages/static/media/enfants_voiture_tenue_classe.8714ec1ad16caccbebee.jpeg",
@@ -13,11 +13,11 @@
     "static/media/romantique.jpeg": "/wedding-day-pages/static/media/romantique.e295204f6db4b1734f31.jpeg",
     "index.html": "/wedding-day-pages/index.html",
     "main.bdd06f37.css.map": "/wedding-day-pages/static/css/main.bdd06f37.css.map",
-    "main.6846d16c.js.map": "/wedding-day-pages/static/js/main.6846d16c.js.map",
+    "main.2bea10f2.js.map": "/wedding-day-pages/static/js/main.2bea10f2.js.map",
     "453.df31e133.chunk.js.map": "/wedding-day-pages/static/js/453.df31e133.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bdd06f37.css",
-    "static/js/main.6846d16c.js"
+    "static/js/main.2bea10f2.js"
   ]
 }
